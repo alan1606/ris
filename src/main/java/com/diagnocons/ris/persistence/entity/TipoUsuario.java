@@ -36,4 +36,20 @@ public class TipoUsuario {
     public void setTipo(String tipo) {
         this.tipo = tipo;
     }
+
+    public List<Usuario> getUsuarios() {
+        return usuarios;
+    }
+
+    public void setUsuarios(List<Usuario> usuarios) {
+        this.usuarios = usuarios;
+    }
+
+    public List<PlantillaPermisosTipoUsuario> getPlantillaPermisosTipoUsuarios() {
+        return plantillaPermisosTipoUsuarios;
+    }
+
+    public void setPlantillaPermisosTipoUsuarios(List<PlantillaPermisosTipoUsuario> plantillaPermisosTipoUsuarios) {
+        this.plantillaPermisosTipoUsuarios = plantillaPermisosTipoUsuarios;
+    }
 }

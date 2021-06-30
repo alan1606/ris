@@ -15,6 +15,8 @@ public class Usuario {
     @JoinColumn(name = "idTipoUsuario", insertable=false, updatable = false)
     private TipoUsuario tipoUsuario;
 
+    private Long idTipoUsuario;
+
     private String nick;
 
     private String pass;
@@ -25,6 +27,7 @@ public class Usuario {
 
     private String phoneNumber;
 
+    @Column(name = "activeUser")
     private Boolean activeUser;
 
     private String replaceId;
@@ -37,6 +40,26 @@ public class Usuario {
     @OneToMany(mappedBy = "usuario")
     private List<FotoUsuario> fotoUsuario;
 
+    @OneToMany(mappedBy = "usuario")
+    private List<Persona> personaList;
+
+    @OneToMany(mappedBy = "usuario")
+    private List<MedicoRadiologo> medicoRadiologoList;
+
+    @OneToMany(mappedBy = "usuario")
+    private List<Tecnico> tecnicoList;
+
+    @OneToMany(mappedBy = "usuario")
+    private List<Recepcionista> recepcionistaList;
+
+    public Long getIdTipoUsuario() {
+        return idTipoUsuario;
+    }
+
+    public void setIdTipoUsuario(Long idTipoUsuario) {
+        this.idTipoUsuario = idTipoUsuario;
+    }
+
     public Long getId() {
         return id;
     }
@@ -45,7 +68,13 @@ public class Usuario {
         this.id = id;
     }
 
+    public TipoUsuario getTipoUsuario() {
+        return tipoUsuario;
+    }
 
+    public void setTipoUsuario(TipoUsuario tipoUsuario) {
+        this.tipoUsuario = tipoUsuario;
+    }
 
     public String getNick() {
         return nick;
@@ -109,5 +138,53 @@ public class Usuario {
 
     public void setValidated(Boolean validated) {
         this.validated = validated;
+    }
+
+    public List<PermisoUsuario> getPermisoUsuario() {
+        return permisoUsuario;
+    }
+
+    public void setPermisoUsuario(List<PermisoUsuario> permisoUsuario) {
+        this.permisoUsuario = permisoUsuario;
+    }
+
+    public List<FotoUsuario> getFotoUsuario() {
+        return fotoUsuario;
+    }
+
+    public void setFotoUsuario(List<FotoUsuario> fotoUsuario) {
+        this.fotoUsuario = fotoUsuario;
+    }
+
+    public List<Persona> getPersonaList() {
+        return personaList;
+    }
+
+    public void setPersonaList(List<Persona> personaList) {
+        this.personaList = personaList;
+    }
+
+    public List<MedicoRadiologo> getMedicoRadiologoList() {
+        return medicoRadiologoList;
+    }
+
+    public void setMedicoRadiologoList(List<MedicoRadiologo> medicoRadiologoList) {
+        this.medicoRadiologoList = medicoRadiologoList;
+    }
+
+    public List<Tecnico> getTecnicoList() {
+        return tecnicoList;
+    }
+
+    public void setTecnicoList(List<Tecnico> tecnicoList) {
+        this.tecnicoList = tecnicoList;
+    }
+
+    public List<Recepcionista> getRecepcionistaList() {
+        return recepcionistaList;
+    }
+
+    public void setRecepcionistaList(List<Recepcionista> recepcionistaList) {
+        this.recepcionistaList = recepcionistaList;
     }
 }

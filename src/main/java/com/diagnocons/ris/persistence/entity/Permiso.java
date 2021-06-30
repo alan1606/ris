@@ -21,6 +21,7 @@ public class Permiso {
     @OneToMany(mappedBy = "permiso")
     private List<PermisoUsuario> permisoUsuario;
 
+
     public Long getId() {
         return id;
     }
@@ -35,5 +36,21 @@ public class Permiso {
 
     public void setPermiso(String permiso) {
         this.permiso = permiso;
+    }
+
+    public List<PlantillaPermisosTipoUsuario> getPlantillaPermisosTipoUsuario() {
+        return plantillaPermisosTipoUsuario;
+    }
+
+    public void setPlantillaPermisosTipoUsuario(List<PlantillaPermisosTipoUsuario> plantillaPermisosTipoUsuario) {
+        this.plantillaPermisosTipoUsuario = plantillaPermisosTipoUsuario;
+    }
+
+    public List<PermisoUsuario> getPermisoUsuario() {
+        return permisoUsuario;
+    }
+
+    public void setPermisoUsuario(List<PermisoUsuario> permisoUsuario) {
+        this.permisoUsuario = permisoUsuario;
     }
 }

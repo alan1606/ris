@@ -54,7 +54,7 @@ create table formaPago(
 create table departamento (
 	id bigint unsigned not null auto_increment,
     nombre varchar(15) not null,
-	duracion_minutos smallint unsigned not null default 0 comment "Para aproximar los lugares de la agenda, se da por hecho que todos los estudios del mismo tipo duran lo mismo, ejemplo: una tac 25 minutos", 
+	duracionMinutos smallint unsigned not null default 0 comment "Para aproximar los lugares de la agenda, se da por hecho que todos los estudios del mismo tipo duran lo mismo, ejemplo: una tac 25 minutos", 
     horaInicio time not null default "00:00" comment "Es para crear la plantilla de horario por departamento en un día regular",
     horaFin time not null default "00:00",
     constraint pk_id primary key (id),
