@@ -3,7 +3,7 @@ package com.diagnocons.ris.persistence.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "fotoEstudio")
+@Table(name = "foto_estudio")
 public class FotoEstudio {
 
     @Id
@@ -11,7 +11,7 @@ public class FotoEstudio {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "idEstudio", insertable = false, updatable = false)
+    @JoinColumn(name = "id_estudio", insertable = false, updatable = false)
     private Estudio estudio;
 
     @Column(name = "ruta", length = 40)

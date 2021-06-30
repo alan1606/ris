@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.math.BigDecimal;
 
 @Entity
-@Table(name = "pagoTicket")
+@Table(name = "pago_ticket")
 public class PagoTicket {
 
     @Id
@@ -13,11 +13,11 @@ public class PagoTicket {
 
 
     @ManyToOne
-    @JoinColumn(name = "idTicket", insertable = false, updatable = false)
+    @JoinColumn(name = "id_ticket", insertable = false, updatable = false)
     private Ticket ticket;
 
     @ManyToOne
-    @JoinColumn(name = "idFormaPago", updatable = false, insertable = false)
+    @JoinColumn(name = "id_forma_pago", updatable = false, insertable = false)
     private FormaPago formaPago;
 
     @Column(name = "cantidad")

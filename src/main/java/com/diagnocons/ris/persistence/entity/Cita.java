@@ -11,19 +11,19 @@ public class Cita {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "idAgenda", insertable = false, updatable = false)
+    @JoinColumn(name = "id_agenda", insertable = false, updatable = false)
     private Agenda agenda;
 
     @ManyToOne
-    @JoinColumn(name = "idEstudio", insertable = false, updatable = false)
+    @JoinColumn(name = "id_estudio", insertable = false, updatable = false)
     private Estudio estudio;
 
     @ManyToOne
-    @JoinColumn(name = "idRecepcionista", insertable = false, updatable = false)
+    @JoinColumn(name = "id_recepcionista", insertable = false, updatable = false)
     private Recepcionista recepcionista;
 
     @ManyToOne
-    @JoinColumn(name = "idDepartamento", insertable = false, updatable = false)
+    @JoinColumn(name = "id_departamento", insertable = false, updatable = false)
     private Departamento departamento;
 
     private Boolean estado;

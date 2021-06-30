@@ -12,11 +12,11 @@ public class Convenio {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "idCategoria", insertable = false, updatable = false)
+    @JoinColumn(name = "id_categoria", insertable = false, updatable = false)
     private Categoria categoria;
 
     @ManyToOne
-    @JoinColumn(name = "idDatosFacturacion", insertable = false, updatable = false)
+    @JoinColumn(name = "id_datos_facturacion", insertable = false, updatable = false)
     private DatosFacturacion datosFacturacion;
 
     @Column(name = "nombre", length = 30)

@@ -13,23 +13,24 @@ public class Recepcionista {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "idUsuario", insertable = false, updatable = false)
+    @JoinColumn(name = "id_usuario", insertable = false, updatable = false)
     private Usuario usuario;
 
-    @Column(name = "primerNombre", length = 20)
+    @Column(name = "primer_nombre", length = 20)
     private String primerNombre;
 
-    @Column(name = "segundoNombre", length = 20)
+    @Column(name = "segundo_nombre", length = 20)
     private String segundoNombre;
 
-    @Column(name = "apellidoPaterno",length = 20)
+    @Column(name = "apellido_paterno",length = 20)
     private String apellidoPaterno;
 
-    @Column(name = "apellidoMaterno", length = 20)
+    @Column(name = "apellido_materno", length = 20)
     private String apellidoMaterno;
 
     private Character sexo;
 
+    @Column(name = "fecha_nacimiento")
     private LocalDate fechaNacimiento;
 
     @OneToMany(mappedBy = "recepcionista")

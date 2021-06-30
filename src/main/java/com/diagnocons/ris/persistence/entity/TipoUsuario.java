@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name = "tipoUsuario")
+@Table(name = "tipo_usuario")
 public class TipoUsuario {
 
     @Id
@@ -17,8 +17,8 @@ public class TipoUsuario {
     private List<Usuario> usuarios;
 
 
-    @OneToMany(mappedBy = "tipoUsuario")
-    private List<PlantillaPermisosTipoUsuario> plantillaPermisosTipoUsuarios;
+   /* @OneToMany(mappedBy = "tipoUsuario")
+    private List<PlantillaPermisosTipoUsuario> plantillaPermisosTipoUsuarios;*/
 
 
     public Long getId() {
@@ -45,11 +45,11 @@ public class TipoUsuario {
         this.usuarios = usuarios;
     }
 
-    public List<PlantillaPermisosTipoUsuario> getPlantillaPermisosTipoUsuarios() {
+    /*public List<PlantillaPermisosTipoUsuario> getPlantillaPermisosTipoUsuarios() {
         return plantillaPermisosTipoUsuarios;
     }
 
     public void setPlantillaPermisosTipoUsuarios(List<PlantillaPermisosTipoUsuario> plantillaPermisosTipoUsuarios) {
         this.plantillaPermisosTipoUsuarios = plantillaPermisosTipoUsuarios;
-    }
+    }*/
 }

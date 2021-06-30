@@ -13,7 +13,7 @@ public class Movimiento {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "idCorte", insertable = false, updatable = false)
+    @JoinColumn(name = "id_corte", insertable = false, updatable = false)
     private Corte corte;
 
     private BigDecimal cantidad;

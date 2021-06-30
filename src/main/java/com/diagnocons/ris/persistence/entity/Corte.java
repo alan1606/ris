@@ -15,15 +15,16 @@ public class Corte {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "idTurno", insertable = false, updatable = false)
+    @JoinColumn(name = "id_turno", insertable = false, updatable = false)
     private Turno turno;
 
     @ManyToOne
-    @JoinColumn(name = "idRecepcionistaResponsable", insertable = false, updatable = false)
+    @JoinColumn(name = "id_recepcionista_responsable", insertable = false, updatable = false)
     private Recepcionista recepcionista;
 
     private LocalDate dia;
 
+    @Column(name = "fondo_caja")
     private BigDecimal fondoCaja;
 
     @OneToMany(mappedBy = "corte")

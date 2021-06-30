@@ -15,28 +15,29 @@ public class Estudio {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "idItem", insertable = false, updatable = false)
+    @JoinColumn(name = "id_item", insertable = false, updatable = false)
     private Item item;
 
     @ManyToOne
-    @JoinColumn(name = "idPersona", insertable = false, updatable = false)
+    @JoinColumn(name = "id_persona", insertable = false, updatable = false)
     private Persona persona;
 
     @ManyToOne
-    @JoinColumn(name = "idTicket", insertable = false, updatable = false)
+    @JoinColumn(name = "id_ticket", insertable = false, updatable = false)
     private Ticket ticket;
 
     @ManyToOne
-    @JoinColumn(name = "idTecnico", insertable = false, updatable = false)
+    @JoinColumn(name = "id_tecnico", insertable = false, updatable = false)
     private Tecnico tecnico;
 
-    @Column(name = "dicomId", length = 50)
+    @Column(name = "dicom_id", length = 50)
     private String dicomId;
 
     private LocalDate fecha;
 
     private Boolean interpretado;
 
+    @Column(name = "tomado")
     private Boolean haSidoTomado;
 
     private Character prioridad;

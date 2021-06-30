@@ -15,13 +15,14 @@ public class Ticket {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "idDatosFacturacion", insertable = false, updatable = false)
+    @JoinColumn(name = "id_datos_facturacion", insertable = false, updatable = false)
     private DatosFacturacion datosFacturacion;
 
     private LocalDate fecha;
 
     private LocalTime hora;
 
+    @Column(name = "requiere_factura")
     private Boolean requiereFactura;
 
     private Character estado;

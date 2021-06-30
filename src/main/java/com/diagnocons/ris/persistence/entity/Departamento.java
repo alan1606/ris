@@ -15,10 +15,13 @@ public class Departamento {
     @Column(name = "nombre", length = 15)
     private String nombre;
 
+    @Column(name = "duracion_minutos")
     private Integer duarcionMinutos;
 
+    @Column(name = "hora_inicio")
     private LocalTime horaInicio;
 
+    @Column(name = "hora_fin")
     private LocalTime horaFin;
 
     @OneToMany(mappedBy = "departamento")

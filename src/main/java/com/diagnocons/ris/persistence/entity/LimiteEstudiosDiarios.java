@@ -3,7 +3,7 @@ package com.diagnocons.ris.persistence.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "limiteEstudiosDiarios")
+@Table(name = "limite_estudios_diarios")
 public class LimiteEstudiosDiarios {
 
     @Id
@@ -12,11 +12,11 @@ public class LimiteEstudiosDiarios {
 
 
     @ManyToOne
-    @JoinColumn(name = "idDepartamento", updatable = false, insertable = false)
+    @JoinColumn(name = "id_departamento", updatable = false, insertable = false)
     private Departamento departamento;
 
     @ManyToOne
-    @JoinColumn(name = "idConvenio", updatable = false, insertable = false)
+    @JoinColumn(name = "id_convenio", updatable = false, insertable = false)
     private Convenio convenio;
 
     private Long limite;

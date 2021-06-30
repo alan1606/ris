@@ -13,13 +13,14 @@ public class Item {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "idConcepto", insertable = false, updatable = false)
+    @JoinColumn(name = "id_concepto", insertable = false, updatable = false)
     private Concepto concepto;
 
     @ManyToOne
-    @JoinColumn(name = "idCategoria", insertable = false, updatable = false)
+    @JoinColumn(name = "id_categoria", insertable = false, updatable = false)
     private Categoria categoria;
 
+    @Column(name = "precio_venta")
     private BigDecimal precioVenta;
 
     private Boolean activo;

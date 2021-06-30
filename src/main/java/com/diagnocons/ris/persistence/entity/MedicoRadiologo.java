@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name = "medicoRadiologo")
+@Table(name = "medico_radiologo")
 public class MedicoRadiologo {
 
     @Id
@@ -12,19 +12,19 @@ public class MedicoRadiologo {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "idUsuario", insertable = false, updatable = false)
+    @JoinColumn(name = "id_usuario", insertable = false, updatable = false)
     private Usuario usuario;
 
-    @Column(name = "primerNombre", length = 20)
+    @Column(name = "primer_nombre", length = 20)
     private String primerNombre;
 
-    @Column(name = "segundoNombre", length = 20)
+    @Column(name = "segundo_nombre", length = 20)
     private String segundoNombre;
 
-    @Column(name = "apellidoPaterno",length = 20)
+    @Column(name = "apellido_paterno",length = 20)
     private String apellidoPaterno;
 
-    @Column(name = "apellidoMaterno", length = 20)
+    @Column(name = "apellido_materno", length = 20)
     private String apellidoMaterno;
 
     private Character sexo;
@@ -35,10 +35,10 @@ public class MedicoRadiologo {
     @Column(name = "especialidad", length = 50)
     private String especialidad;
 
-    @Column(name = "cedulaFederal", length = 20)
+    @Column(name = "cedula_federal", length = 20)
     private String cedulaFederal;
 
-    @Column(name = "cedulaEstatal", length = 20)
+    @Column(name = "cedula_estatal", length = 20)
     private String cedulaEstatal;
 
     @OneToMany(mappedBy = "medicoRadiologo")

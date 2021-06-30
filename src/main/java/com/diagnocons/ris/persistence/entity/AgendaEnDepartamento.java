@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.time.LocalTime;
 
 @Entity
-@Table(name = "agendaEnDepartamento")
+@Table(name = "agenda_en_departamento")
 public class AgendaEnDepartamento {
 
     @Id
@@ -12,15 +12,17 @@ public class AgendaEnDepartamento {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "idAgenda", insertable = false, updatable = false)
+    @JoinColumn(name = "id_agenda", insertable = false, updatable = false)
     private Agenda agenda;
 
     @ManyToOne
-    @JoinColumn(name = "idDepartamento", insertable = false, updatable = false)
+    @JoinColumn(name = "id_departamento", insertable = false, updatable = false)
     private Departamento departamento;
 
+    @Column(name = "hora_incio")
     private LocalTime horaInicio;
 
+    @Column(name = "hora_fin")
     private LocalTime horaFin;
 
     public Long getId() {

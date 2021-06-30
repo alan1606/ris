@@ -5,14 +5,14 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name = "datosFacturacion")
+@Table(name = "datos_facturacion")
 public class DatosFacturacion {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "razonSocial", length = 100)
+    @Column(name = "razon_social", length = 100)
     private String razonSocial;
 
     @Column(name = "rfc", length = 13)

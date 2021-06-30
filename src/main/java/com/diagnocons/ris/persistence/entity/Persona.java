@@ -13,32 +13,33 @@ public class Persona {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "idUsuario", insertable = false, updatable = false)
+    @JoinColumn(name = "id_usuario", insertable = false, updatable = false)
     private Usuario usuario;
 
     @ManyToOne
-    @JoinColumn(name = "idEstado", insertable = false, updatable = false)
+    @JoinColumn(name = "id_estado", insertable = false, updatable = false)
     private Estado estado;
 
     @ManyToOne
-    @JoinColumn(name = "idDatosFacturacion", insertable = false, updatable = false)
+    @JoinColumn(name = "id_datos_facturacion", insertable = false, updatable = false)
     private DatosFacturacion datosFacturacion;
 
-    @Column(name = "patientId", length = 30)
+    @Column(name = "patient_id", length = 30)
     private String patientId;
 
-    @Column(name = "primerNombre", length = 20)
+    @Column(name = "primer_nombre", length = 20)
     private String primerNombre;
 
-    @Column(name = "segundoNombre", length = 20)
+    @Column(name = "segundo_nombre", length = 20)
     private String segundoNombre;
 
-    @Column(name = "apellidoPaterno",length = 20)
+    @Column(name = "apellido_paterno",length = 20)
     private String apellidoPaterno;
 
-    @Column(name = "apellidoMaterno", length = 20)
+    @Column(name = "apellido_materno", length = 20)
     private String apellidoMaterno;
 
+    @Column(name = "fecha_nacimiento")
     private LocalDate fechaNacimiento;
 
     private Character sexo;

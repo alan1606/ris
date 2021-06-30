@@ -12,9 +12,10 @@ public class Usuario {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "idTipoUsuario", insertable=false, updatable = false)
+    @JoinColumn(name = "id_tipo_usuario", insertable=false, updatable = false)
     private TipoUsuario tipoUsuario;
 
+    @Column(name = "id_tipo_usuario")
     private Long idTipoUsuario;
 
     private String nick;
@@ -25,17 +26,19 @@ public class Usuario {
 
     private String email;
 
+    @Column(name = "phone_number")
     private String phoneNumber;
 
-    @Column(name = "activeUser")
+    @Column(name = "active_user")
     private Boolean activeUser;
 
+    @Column(name = "replace_id")
     private String replaceId;
 
     private Boolean validated;
 
-    @OneToMany(mappedBy = "usuario")
-    private List<PermisoUsuario> permisoUsuario;
+    /*@OneToMany(mappedBy = "usuario")
+    private List<PermisoUsuario> permisoUsuario;*/
 
     @OneToMany(mappedBy = "usuario")
     private List<FotoUsuario> fotoUsuario;
@@ -140,13 +143,13 @@ public class Usuario {
         this.validated = validated;
     }
 
-    public List<PermisoUsuario> getPermisoUsuario() {
+    /*public List<PermisoUsuario> getPermisoUsuario() {
         return permisoUsuario;
     }
 
     public void setPermisoUsuario(List<PermisoUsuario> permisoUsuario) {
         this.permisoUsuario = permisoUsuario;
-    }
+    }*/
 
     public List<FotoUsuario> getFotoUsuario() {
         return fotoUsuario;

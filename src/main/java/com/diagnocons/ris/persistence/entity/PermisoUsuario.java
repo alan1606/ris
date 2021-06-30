@@ -3,20 +3,20 @@ package com.diagnocons.ris.persistence.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "permisoUsuario")
+@Table(name = "permiso_usuario")
 
 public class PermisoUsuario {
 
     @EmbeddedId
     private PermisoUsuarioPK id;
 
-    @ManyToOne
-    @JoinColumn(name = "idUsuario", insertable=false, updatable = false)
-    private Usuario usuario;
+    /*@ManyToOne
+    @JoinColumn(name = "id_usuario", insertable=false, updatable = false)
+    private Usuario usuario;*/
 
-    @ManyToOne
-    @JoinColumn(name = "idPermiso", insertable=false, updatable = false)
-    private Permiso permiso;
+   /* @ManyToOne
+    @JoinColumn(name = "id_permiso", insertable=false, updatable = false)
+    private Permiso permiso;*/
 
     public PermisoUsuarioPK getId() {
         return id;
@@ -26,19 +26,19 @@ public class PermisoUsuario {
         this.id = id;
     }
 
-    public Usuario getUsuario() {
+   /* public Usuario getUsuario() {
         return usuario;
     }
 
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
+    }*/
+
+   /* public Permiso getPermisoUsuario() {
+        return permisoUsuario;
     }
 
-    public Permiso getPermiso() {
-        return permiso;
-    }
-
-    public void setPermiso(Permiso permiso) {
-        this.permiso = permiso;
-    }
+    public void setPermisoUsuario(Permiso permisoUsuario) {
+        this.permisoUsuario = permisoUsuario;
+    }*/
 }

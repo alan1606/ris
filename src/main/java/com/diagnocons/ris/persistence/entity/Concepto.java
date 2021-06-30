@@ -12,7 +12,7 @@ public class Concepto {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "idDepartamento", insertable = false, updatable = false)
+    @JoinColumn(name = "id_departamento", insertable = false, updatable = false)
     private Departamento departamento;
 
     @Column(name = "detalle", length = 100)

@@ -27,7 +27,7 @@ public interface UserMapper {
     @InheritInverseConfiguration
     @Mapping(target = "pass", ignore = true)
     @Mapping(target = "nip", ignore = true)
-    @Mapping(target = "permisoUsuario", ignore = true)
+   // @Mapping(target = "permisoUsuario", ignore = true)
     @Mapping(target = "fotoUsuario", ignore = true)
     @Mapping(target = "personaList", ignore = true)
     @Mapping(target = "medicoRadiologoList", ignore = true)

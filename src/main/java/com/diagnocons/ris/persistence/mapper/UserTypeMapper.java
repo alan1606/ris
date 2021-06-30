@@ -18,7 +18,7 @@ public interface UserTypeMapper {
 
     @InheritInverseConfiguration
     @Mapping(target = "usuarios", ignore = true)
-    @Mapping(target = "plantillaPermisosTipoUsuarios", ignore = true)
+    //@Mapping(target = "plantillaPermisosTipoUsuarios", ignore = true)
 
     TipoUsuario toTipoUsuario(UserType userType);
 }

@@ -3,7 +3,7 @@ package com.diagnocons.ris.persistence.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "recepcionistaDepartamento")
+@Table(name = "recepcionista_departamento")
 public class RecepcionistaDepartamento {
 
     @Id
@@ -11,11 +11,11 @@ public class RecepcionistaDepartamento {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "idRecepcionista", insertable = false, updatable = false)
+    @JoinColumn(name = "id_recepcionista", insertable = false, updatable = false)
     private Recepcionista recepcionista;
 
     @ManyToOne
-    @JoinColumn(name = "idDepartamento", insertable = false, updatable = false)
+    @JoinColumn(name = "id_departamento", insertable = false, updatable = false)
     private Departamento departamento;
 
     private Boolean activo;

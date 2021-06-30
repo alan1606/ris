@@ -15,8 +15,10 @@ public class Turno {
     @Column(name = "descripcion", length = 30)
     private String descripcion;
 
+    @Column(name = "hora_inicio")
     private LocalTime horaInicio;
 
+    @Column(name = "hora_fin")
     private LocalTime horaFin;
 
     @OneToMany(mappedBy = "turno")

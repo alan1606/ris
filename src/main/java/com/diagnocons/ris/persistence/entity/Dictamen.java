@@ -12,11 +12,11 @@ public class Dictamen {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "idMedicoRadiologo", insertable = false, updatable = false)
+    @JoinColumn(name = "id_medico_radiologo", insertable = false, updatable = false)
     private MedicoRadiologo medicoRadiologo;
 
     @ManyToOne
-    @JoinColumn(name = "idEstudio", insertable = false, updatable = false)
+    @JoinColumn(name = "id_estudio", insertable = false, updatable = false)
     private Estudio estudio;
 
     private LocalDate fecha;
