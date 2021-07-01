@@ -12,7 +12,6 @@ public interface UsuarioCrudRepository extends CrudRepository<Usuario, Long> {
     @Override
     Optional<Usuario> findById(Long aLong);
 
-
     Optional<Usuario> findByEmailOrderByNickDesc(String email);
 
     Optional<Usuario> findByPhoneNumberOrderByNickDesc(String phoneNumber);

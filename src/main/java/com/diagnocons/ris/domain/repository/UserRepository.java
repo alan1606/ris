@@ -1,7 +1,6 @@
 package com.diagnocons.ris.domain.repository;
 
-import com.diagnocons.ris.domain.User;
-import com.diagnocons.ris.domain.UserType;
+import com.diagnocons.ris.domain.dto.User;
 
 import java.util.List;
 import java.util.Optional;

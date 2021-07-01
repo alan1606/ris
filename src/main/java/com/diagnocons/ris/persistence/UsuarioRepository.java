@@ -1,6 +1,6 @@
 package com.diagnocons.ris.persistence;
 
-import com.diagnocons.ris.domain.User;
+import com.diagnocons.ris.domain.dto.User;
 import com.diagnocons.ris.domain.repository.UserRepository;
 import com.diagnocons.ris.persistence.crud.UsuarioCrudRepository;
 import com.diagnocons.ris.persistence.entity.Usuario;

@@ -1,6 +1,6 @@
 package com.diagnocons.ris.persistence.mapper;
 
-import com.diagnocons.ris.domain.User;
+import com.diagnocons.ris.domain.dto.User;
 import com.diagnocons.ris.persistence.entity.Usuario;
 import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;

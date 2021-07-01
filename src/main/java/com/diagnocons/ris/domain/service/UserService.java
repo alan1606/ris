@@ -1,6 +1,6 @@
 package com.diagnocons.ris.domain.service;
 
-import com.diagnocons.ris.domain.User;
+import com.diagnocons.ris.domain.dto.User;
 import com.diagnocons.ris.domain.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

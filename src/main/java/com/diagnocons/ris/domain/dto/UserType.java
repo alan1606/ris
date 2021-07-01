@@ -1,4 +1,4 @@
-package com.diagnocons.ris.domain;
+package com.diagnocons.ris.domain.dto;
 
 public class UserType{
 
