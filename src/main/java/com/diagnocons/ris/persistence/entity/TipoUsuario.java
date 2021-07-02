@@ -1,7 +1,10 @@
 package com.diagnocons.ris.persistence.entity;
 
+
+
 import javax.persistence.*;
 import java.util.List;
+
 
 @Entity
 @Table(name = "tipo_usuario")
@@ -15,11 +18,6 @@ public class TipoUsuario {
 
     @OneToMany(mappedBy = "tipoUsuario")
     private List<Usuario> usuarios;
-
-
-   /* @OneToMany(mappedBy = "tipoUsuario")
-    private List<PlantillaPermisosTipoUsuario> plantillaPermisosTipoUsuarios;*/
-
 
     public Long getId() {
         return id;
@@ -44,6 +42,11 @@ public class TipoUsuario {
     public void setUsuarios(List<Usuario> usuarios) {
         this.usuarios = usuarios;
     }
+
+
+    /* @OneToMany(mappedBy = "tipoUsuario")
+    private List<PlantillaPermisosTipoUsuario> plantillaPermisosTipoUsuarios;*/
+
 
     /*public List<PlantillaPermisosTipoUsuario> getPlantillaPermisosTipoUsuarios() {
         return plantillaPermisosTipoUsuarios;

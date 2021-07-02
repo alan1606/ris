@@ -1,5 +1,6 @@
 package com.diagnocons.ris.persistence.entity;
 
+
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.List;
@@ -12,7 +13,7 @@ public class Item {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "id_concepto", insertable = false, updatable = false)
     private Concepto concepto;
 

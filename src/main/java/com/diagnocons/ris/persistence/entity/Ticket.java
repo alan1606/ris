@@ -1,10 +1,13 @@
 package com.diagnocons.ris.persistence.entity;
 
+
+
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
+
 
 @Entity
 @Table(name = "ticket")
@@ -37,18 +40,6 @@ public class Ticket {
 
     @OneToMany(mappedBy = "ticket")
     private List<Estudio> estudioList;
-
-    public Ticket() {
-    }
-
-    public Ticket(DatosFacturacion datosFacturacion, LocalDate fecha, LocalTime hora, Boolean requiereFactura, Character estado, BigDecimal total) {
-        this.datosFacturacion = datosFacturacion;
-        this.fecha = fecha;
-        this.hora = hora;
-        this.requiereFactura = requiereFactura;
-        this.estado = estado;
-        this.total = total;
-    }
 
 
     public Long getId() {

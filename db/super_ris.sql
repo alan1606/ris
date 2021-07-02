@@ -355,6 +355,10 @@ create table permiso(
     primary key (id)
 );
 
+
+insert into permiso values
+(1, "a ser joto"),(2, "a estar todo meco")
+;
 create table permiso_usuario(
 	id_usuario bigint unsigned not null,
     id_permiso bigint unsigned not null,

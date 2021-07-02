@@ -1,5 +1,6 @@
 package com.diagnocons.ris.persistence.entity;
 
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -21,9 +22,6 @@ public class Estado {
 
     @OneToMany(mappedBy = "estado")
     private List<Persona> personaList;
-
-    public Estado() {
-    }
 
 
     public Long getId() {

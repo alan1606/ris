@@ -1,6 +1,8 @@
 package com.diagnocons.ris.persistence.entity;
 
+
 import javax.persistence.*;
+
 
 @Entity
 @Table(name = "limite_estudios_diarios")
@@ -19,7 +21,6 @@ public class LimiteEstudiosDiarios {
     @JoinColumn(name = "id_convenio", updatable = false, insertable = false)
     private Convenio convenio;
 
-    private Long limite;
 
     public Long getId() {
         return id;
@@ -43,13 +44,5 @@ public class LimiteEstudiosDiarios {
 
     public void setConvenio(Convenio convenio) {
         this.convenio = convenio;
-    }
-
-    public Long getLimite() {
-        return limite;
-    }
-
-    public void setLimite(Long limite) {
-        this.limite = limite;
     }
 }

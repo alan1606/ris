@@ -1,6 +1,9 @@
 package com.diagnocons.ris.persistence.entity;
 
+
+
 import javax.persistence.*;
+
 
 @Entity
 @Table(name = "foto_usuario")
@@ -15,7 +18,6 @@ public class FotoUsuario {
     private Usuario usuario;
 
     private String ruta;
-
 
     public Long getId() {
         return id;

@@ -1,7 +1,9 @@
 package com.diagnocons.ris.persistence.entity;
 
+
 import javax.persistence.*;
 import java.time.LocalTime;
+
 
 @Entity
 @Table(name = "agenda_en_departamento")
@@ -24,6 +26,7 @@ public class AgendaEnDepartamento {
 
     @Column(name = "hora_fin")
     private LocalTime horaFin;
+
 
     public Long getId() {
         return id;

@@ -1,12 +1,16 @@
 package com.diagnocons.ris.persistence.entity;
 
+
+
 import javax.persistence.Embeddable;
 import java.io.Serializable;
+
 
 @Embeddable
 public class PlantillaPermisosTipoUsuarioPK implements Serializable {
     private Long idTipoUsuario;
     private Long idPermiso;
+
 
     public Long getIdTipoUsuario() {
         return idTipoUsuario;

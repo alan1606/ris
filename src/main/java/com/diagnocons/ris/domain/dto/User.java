@@ -1,5 +1,6 @@
 package com.diagnocons.ris.domain.dto;
 
+
 public class User {
 
     private Long userId;
@@ -10,22 +11,6 @@ public class User {
     private boolean active;
     private String string;
     private boolean validated;
-
-    public boolean isActive() {
-        return active;
-    }
-
-    public void setActive(boolean active) {
-        this.active = active;
-    }
-
-    public boolean isValidated() {
-        return validated;
-    }
-
-    public void setValidated(boolean validated) {
-        this.validated = validated;
-    }
 
     public Long getUserId() {
         return userId;
@@ -67,7 +52,13 @@ public class User {
         this.phoneNumber = phoneNumber;
     }
 
+    public boolean isActive() {
+        return active;
+    }
 
+    public void setActive(boolean active) {
+        this.active = active;
+    }
 
     public String getString() {
         return string;
@@ -77,5 +68,11 @@ public class User {
         this.string = string;
     }
 
+    public boolean isValidated() {
+        return validated;
+    }
 
+    public void setValidated(boolean validated) {
+        this.validated = validated;
+    }
 }

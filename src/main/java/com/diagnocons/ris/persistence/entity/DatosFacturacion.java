@@ -1,8 +1,10 @@
 package com.diagnocons.ris.persistence.entity;
 
 
+
 import javax.persistence.*;
 import java.util.List;
+
 
 @Entity
 @Table(name = "datos_facturacion")
@@ -27,17 +29,14 @@ public class DatosFacturacion {
     @Column(name = "telefono", length = 13)
     private String telefono;
 
-    @OneToMany(mappedBy = "datosFacturacion")
-    private List<Convenio> convenio;
+    @OneToOne(mappedBy = "datosFacturacion")
+    private Convenio convenio;
 
-    @OneToMany(mappedBy = "datosFacturacion")
-    private List<Persona> personaList;
+    @OneToOne(mappedBy = "datosFacturacion")
+    private Persona persona;
 
     @OneToMany(mappedBy = "datosFacturacion")
     private List<Ticket> ticketList;
-
-    public DatosFacturacion() {
-    }
 
 
     public Long getId() {
@@ -88,20 +87,20 @@ public class DatosFacturacion {
         this.telefono = telefono;
     }
 
-    public List<Convenio> getConvenio() {
+    public Convenio getConvenio() {
         return convenio;
     }
 
-    public void setConvenio(List<Convenio> convenio) {
+    public void setConvenio(Convenio convenio) {
         this.convenio = convenio;
     }
 
-    public List<Persona> getPersonaList() {
-        return personaList;
+    public Persona getPersona() {
+        return persona;
     }
 
-    public void setPersonaList(List<Persona> personaList) {
-        this.personaList = personaList;
+    public void setPersona(Persona persona) {
+        this.persona = persona;
     }
 
     public List<Ticket> getTicketList() {

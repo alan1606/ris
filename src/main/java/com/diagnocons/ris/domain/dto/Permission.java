@@ -1,5 +1,6 @@
 package com.diagnocons.ris.domain.dto;
 
+
 public class Permission {
     private Long idPermission;
     private String permission;
@@ -19,4 +20,8 @@ public class Permission {
     public void setPermission(String permission) {
         this.permission = permission;
     }
+
+
+
+
 }

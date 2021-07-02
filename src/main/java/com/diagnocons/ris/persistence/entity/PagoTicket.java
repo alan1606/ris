@@ -1,5 +1,6 @@
 package com.diagnocons.ris.persistence.entity;
 
+
 import javax.persistence.*;
 import java.math.BigDecimal;
 
@@ -23,8 +24,6 @@ public class PagoTicket {
     @Column(name = "cantidad")
     private BigDecimal cantidad;
 
-    public PagoTicket() {
-    }
 
     public Long getId() {
         return id;
@@ -58,3 +57,5 @@ public class PagoTicket {
         this.cantidad = cantidad;
     }
 }
+
+

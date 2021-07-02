@@ -1,5 +1,6 @@
 package com.diagnocons.ris.domain.dto;
 
+
 public class UserType{
 
     private Long idUserType;

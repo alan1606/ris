@@ -1,7 +1,10 @@
 package com.diagnocons.ris.persistence.entity;
 
+
+
 import javax.persistence.*;
 import java.util.List;
+
 
 @Entity
 @Table(name = "concepto")
@@ -20,8 +23,9 @@ public class Concepto {
 
     private Long costo;
 
-    @OneToMany(mappedBy = "concepto")
-    private List<Item> itemList;
+    @OneToOne(mappedBy = "concepto")
+    private Item item;
+
 
     public Long getId() {
         return id;
@@ -55,11 +59,11 @@ public class Concepto {
         this.costo = costo;
     }
 
-    public List<Item> getItemList() {
-        return itemList;
+    public Item getItem() {
+        return item;
     }
 
-    public void setItemList(List<Item> itemList) {
-        this.itemList = itemList;
+    public void setItem(Item item) {
+        this.item = item;
     }
 }

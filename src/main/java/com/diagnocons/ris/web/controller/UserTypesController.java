@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/userTypes")
+@RequestMapping("/usersTypes")
 public class UserTypesController {
     @Autowired
     private UserTypeService userTypeService;

@@ -1,10 +1,12 @@
 package com.diagnocons.ris.persistence.entity;
 
 
+
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
+
 
 @Entity
 @Table(name = "corte")
@@ -14,11 +16,11 @@ public class Corte {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "id_turno", insertable = false, updatable = false)
     private Turno turno;
 
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "id_recepcionista_responsable", insertable = false, updatable = false)
     private Recepcionista recepcionista;
 
@@ -29,6 +31,7 @@ public class Corte {
 
     @OneToMany(mappedBy = "corte")
     private List<Movimiento> movimientoList;
+
 
     public Long getId() {
         return id;

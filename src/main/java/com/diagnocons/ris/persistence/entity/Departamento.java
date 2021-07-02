@@ -1,8 +1,10 @@
 package com.diagnocons.ris.persistence.entity;
 
+
 import javax.persistence.*;
 import java.time.LocalTime;
 import java.util.List;
+
 
 @Entity
 @Table(name = "departamento")

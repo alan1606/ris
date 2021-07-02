@@ -1,6 +1,8 @@
 package com.diagnocons.ris.persistence.entity;
 
+
 import javax.persistence.*;
+
 
 @Entity
 @Table(name = "recepcionista_departamento")
@@ -19,6 +21,7 @@ public class RecepcionistaDepartamento {
     private Departamento departamento;
 
     private Boolean activo;
+
 
     public Long getId() {
         return id;

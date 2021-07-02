@@ -1,7 +1,10 @@
 package com.diagnocons.ris.persistence.entity;
 
+
+
 import javax.persistence.*;
 import java.util.List;
+
 
 @Entity
 @Table(name = "usuario")
@@ -43,25 +46,18 @@ public class Usuario {
     @OneToMany(mappedBy = "usuario")
     private List<FotoUsuario> fotoUsuario;
 
-    @OneToMany(mappedBy = "usuario")
-    private List<Persona> personaList;
+    @OneToOne(mappedBy = "usuario")
+    private Persona persona;
 
-    @OneToMany(mappedBy = "usuario")
-    private List<MedicoRadiologo> medicoRadiologoList;
+    @OneToOne(mappedBy = "usuario")
+    private MedicoRadiologo medicoRadiologo;
 
-    @OneToMany(mappedBy = "usuario")
-    private List<Tecnico> tecnicoList;
+    @OneToOne(mappedBy = "usuario")
+    private Tecnico tecnico;
 
-    @OneToMany(mappedBy = "usuario")
-    private List<Recepcionista> recepcionistaList;
+    @OneToOne(mappedBy = "usuario")
+    private Recepcionista recepcionista;
 
-    public Long getIdTipoUsuario() {
-        return idTipoUsuario;
-    }
-
-    public void setIdTipoUsuario(Long idTipoUsuario) {
-        this.idTipoUsuario = idTipoUsuario;
-    }
 
     public Long getId() {
         return id;
@@ -77,6 +73,14 @@ public class Usuario {
 
     public void setTipoUsuario(TipoUsuario tipoUsuario) {
         this.tipoUsuario = tipoUsuario;
+    }
+
+    public Long getIdTipoUsuario() {
+        return idTipoUsuario;
+    }
+
+    public void setIdTipoUsuario(Long idTipoUsuario) {
+        this.idTipoUsuario = idTipoUsuario;
     }
 
     public String getNick() {
@@ -143,14 +147,6 @@ public class Usuario {
         this.validated = validated;
     }
 
-    /*public List<PermisoUsuario> getPermisoUsuario() {
-        return permisoUsuario;
-    }
-
-    public void setPermisoUsuario(List<PermisoUsuario> permisoUsuario) {
-        this.permisoUsuario = permisoUsuario;
-    }*/
-
     public List<FotoUsuario> getFotoUsuario() {
         return fotoUsuario;
     }
@@ -159,35 +155,35 @@ public class Usuario {
         this.fotoUsuario = fotoUsuario;
     }
 
-    public List<Persona> getPersonaList() {
-        return personaList;
+    public Persona getPersona() {
+        return persona;
     }
 
-    public void setPersonaList(List<Persona> personaList) {
-        this.personaList = personaList;
+    public void setPersona(Persona persona) {
+        this.persona = persona;
     }
 
-    public List<MedicoRadiologo> getMedicoRadiologoList() {
-        return medicoRadiologoList;
+    public MedicoRadiologo getMedicoRadiologo() {
+        return medicoRadiologo;
     }
 
-    public void setMedicoRadiologoList(List<MedicoRadiologo> medicoRadiologoList) {
-        this.medicoRadiologoList = medicoRadiologoList;
+    public void setMedicoRadiologo(MedicoRadiologo medicoRadiologo) {
+        this.medicoRadiologo = medicoRadiologo;
     }
 
-    public List<Tecnico> getTecnicoList() {
-        return tecnicoList;
+    public Tecnico getTecnico() {
+        return tecnico;
     }
 
-    public void setTecnicoList(List<Tecnico> tecnicoList) {
-        this.tecnicoList = tecnicoList;
+    public void setTecnico(Tecnico tecnico) {
+        this.tecnico = tecnico;
     }
 
-    public List<Recepcionista> getRecepcionistaList() {
-        return recepcionistaList;
+    public Recepcionista getRecepcionista() {
+        return recepcionista;
     }
 
-    public void setRecepcionistaList(List<Recepcionista> recepcionistaList) {
-        this.recepcionistaList = recepcionistaList;
+    public void setRecepcionista(Recepcionista recepcionista) {
+        this.recepcionista = recepcionista;
     }
 }

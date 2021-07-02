@@ -1,7 +1,9 @@
 package com.diagnocons.ris.persistence.entity;
 
+
 import javax.persistence.*;
 import java.util.List;
+
 
 @Entity
 @Table(name = "convenio")
@@ -11,11 +13,11 @@ public class Convenio {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "id_categoria", insertable = false, updatable = false)
     private Categoria categoria;
 
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "id_datos_facturacion", insertable = false, updatable = false)
     private DatosFacturacion datosFacturacion;
 
@@ -25,8 +27,6 @@ public class Convenio {
     @OneToMany(mappedBy = "convenio")
     private List<LimiteEstudiosDiarios> limiteEstudiosDiariosList;
 
-    public Convenio() {
-    }
 
     public Long getId() {
         return id;

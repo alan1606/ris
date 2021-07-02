@@ -1,8 +1,11 @@
 package com.diagnocons.ris.persistence.entity;
 
+
+
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.List;
+
 
 @Entity
 @Table(name = "recepcionista")
@@ -12,7 +15,7 @@ public class Recepcionista {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "id_usuario", insertable = false, updatable = false)
     private Usuario usuario;
 

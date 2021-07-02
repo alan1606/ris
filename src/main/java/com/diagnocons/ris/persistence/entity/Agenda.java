@@ -1,5 +1,6 @@
 package com.diagnocons.ris.persistence.entity;
 
+
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.List;
@@ -52,3 +53,4 @@ public class Agenda {
         this.agendaEnDepartamentoList = agendaEnDepartamentoList;
     }
 }
+

@@ -29,10 +29,10 @@ public interface UserMapper {
     @Mapping(target = "nip", ignore = true)
    // @Mapping(target = "permisoUsuario", ignore = true)
     @Mapping(target = "fotoUsuario", ignore = true)
-    @Mapping(target = "personaList", ignore = true)
-    @Mapping(target = "medicoRadiologoList", ignore = true)
-    @Mapping(target = "tecnicoList", ignore = true)
-    @Mapping(target = "recepcionistaList", ignore = true)
+    @Mapping(target = "persona", ignore = true)
+    @Mapping(target = "medicoRadiologo", ignore = true)
+    @Mapping(target = "tecnico", ignore = true)
+    @Mapping(target = "recepcionista", ignore = true)
     @Mapping(target = "idTipoUsuario", ignore = true)
     Usuario toUsuario(User user);
 }

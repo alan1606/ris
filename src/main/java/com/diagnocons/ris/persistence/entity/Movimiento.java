@@ -1,8 +1,10 @@
 package com.diagnocons.ris.persistence.entity;
 
+
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalTime;
+
 
 @Entity
 @Table(name = "movimiento")
@@ -21,9 +23,6 @@ public class Movimiento {
     @Column(name = "descripcion", length = 60)
     private String descripcion;
 
-    private LocalTime hora;
-
-    private Boolean entrada;
 
     public Long getId() {
         return id;
@@ -55,21 +54,5 @@ public class Movimiento {
 
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
-    }
-
-    public LocalTime getHora() {
-        return hora;
-    }
-
-    public void setHora(LocalTime hora) {
-        this.hora = hora;
-    }
-
-    public Boolean getEntrada() {
-        return entrada;
-    }
-
-    public void setEntrada(Boolean entrada) {
-        this.entrada = entrada;
     }
 }

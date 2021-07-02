@@ -1,5 +1,7 @@
 package com.diagnocons.ris.persistence.entity;
 
+
+
 import javax.persistence.*;
 
 @Entity
@@ -14,7 +16,7 @@ public class Cita {
     @JoinColumn(name = "id_agenda", insertable = false, updatable = false)
     private Agenda agenda;
 
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "id_estudio", insertable = false, updatable = false)
     private Estudio estudio;
 
@@ -27,6 +29,7 @@ public class Cita {
     private Departamento departamento;
 
     private Boolean estado;
+
 
     public Long getId() {
         return id;

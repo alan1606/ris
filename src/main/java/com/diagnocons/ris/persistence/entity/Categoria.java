@@ -1,7 +1,9 @@
 package com.diagnocons.ris.persistence.entity;
 
+
 import javax.persistence.*;
 import java.util.List;
+
 
 @Entity
 @Table(name = "categoria")
@@ -19,11 +21,12 @@ public class Categoria {
 
     private Boolean activo;
 
-    @OneToMany(mappedBy = "categoria")
-    private List<Convenio> convenioList;
+    @OneToOne(mappedBy = "categoria")
+    private Convenio convenio;
 
     @OneToMany(mappedBy = "categoria")
     private List<Item> itemList;
+
 
     public Long getId() {
         return id;
@@ -57,12 +60,12 @@ public class Categoria {
         this.activo = activo;
     }
 
-    public List<Convenio> getConvenioList() {
-        return convenioList;
+    public Convenio getConvenio() {
+        return convenio;
     }
 
-    public void setConvenioList(List<Convenio> convenioList) {
-        this.convenioList = convenioList;
+    public void setConvenio(Convenio convenio) {
+        this.convenio = convenio;
     }
 
     public List<Item> getItemList() {

@@ -1,7 +1,9 @@
 package com.diagnocons.ris.persistence.entity;
 
+
 import javax.persistence.*;
 import java.util.List;
+
 
 @Entity
 @Table(name = "forma_pago")
@@ -15,14 +17,6 @@ public class FormaPago {
 
     @OneToMany(mappedBy = "formaPago")
     private List<PagoTicket> pagoTicket;
-
-    public FormaPago() {
-    }
-
-    public FormaPago(String descripcion, List<PagoTicket> pagoTicket) {
-        this.descripcion = descripcion;
-        this.pagoTicket = pagoTicket;
-    }
 
 
     public Long getId() {

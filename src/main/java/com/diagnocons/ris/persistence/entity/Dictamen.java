@@ -1,5 +1,6 @@
 package com.diagnocons.ris.persistence.entity;
 
+
 import javax.persistence.*;
 import java.time.LocalDate;
 
@@ -11,11 +12,11 @@ public class Dictamen {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "id_medico_radiologo", insertable = false, updatable = false)
     private MedicoRadiologo medicoRadiologo;
 
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "id_estudio", insertable = false, updatable = false)
     private Estudio estudio;
 

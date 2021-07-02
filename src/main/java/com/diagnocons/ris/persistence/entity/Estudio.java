@@ -1,6 +1,7 @@
 package com.diagnocons.ris.persistence.entity;
 
 
+
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -50,11 +51,11 @@ public class Estudio {
     @OneToMany(mappedBy = "estudio")
     private List<FotoEstudio> fotoEstudioList;
 
-    @OneToMany(mappedBy = "estudio")
-    private List<Dictamen> dictamenList;
+    @OneToOne(mappedBy = "estudio")
+    private Dictamen dictamen;
 
-    @OneToMany(mappedBy = "estudio")
-    private List<Cita> citaList;
+    @OneToOne(mappedBy = "estudio")
+    private Cita citaList;
 
 
     public Long getId() {
@@ -161,19 +162,19 @@ public class Estudio {
         this.fotoEstudioList = fotoEstudioList;
     }
 
-    public List<Dictamen> getDictamenList() {
-        return dictamenList;
+    public Dictamen getDictamen() {
+        return dictamen;
     }
 
-    public void setDictamenList(List<Dictamen> dictamenList) {
-        this.dictamenList = dictamenList;
+    public void setDictamen(Dictamen dictamen) {
+        this.dictamen = dictamen;
     }
 
-    public List<Cita> getCitaList() {
+    public Cita getCitaList() {
         return citaList;
     }
 
-    public void setCitaList(List<Cita> citaList) {
+    public void setCitaList(Cita citaList) {
         this.citaList = citaList;
     }
 }

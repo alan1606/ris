@@ -1,7 +1,9 @@
 package com.diagnocons.ris.persistence.entity;
 
+
 import javax.persistence.*;
 import java.util.List;
+
 
 @Entity
 @Table(name = "medico_radiologo")
@@ -11,7 +13,7 @@ public class MedicoRadiologo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "id_usuario", insertable = false, updatable = false)
     private Usuario usuario;
 
@@ -43,6 +45,7 @@ public class MedicoRadiologo {
 
     @OneToMany(mappedBy = "medicoRadiologo")
     private List<Dictamen> dictamenList;
+
 
     public Long getId() {
         return id;
