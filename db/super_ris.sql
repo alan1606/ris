@@ -359,16 +359,31 @@ create table permiso(
 insert into permiso values
 (1, "a ser joto"),(2, "a estar todo meco")
 ;
+
+
+
 create table permiso_usuario(
+	id bigint unsigned not null auto_increment,
 	id_usuario bigint unsigned not null,
     id_permiso bigint unsigned not null,
+    primary key(id),
     foreign key (id_usuario) references usuario(id),
     foreign key(id_permiso) references permiso(id)
 ) comment "Vincula un permiso con un usuario, si un registro existe aquí significa que el usuario tiene ese permiso";
 
 create table plantilla_permisos_tipo_usuario(
+	id bigint unsigned not null auto_increment,
 	id_tipo_usuario bigint unsigned not null,
     id_permiso bigint unsigned not null,
+    primary key (id),
     foreign key (id_tipo_usuario) references tipo_usuario(id),
     foreign key(id_permiso) references permiso(id)
 ) comment "Vincula un permiso con un usuario, si un registro existe aquí significa que el usuario tiene ese permiso";
+
+insert into plantilla_permisos_tipo_usuario values
+(1,1, 1), (2,1,2);
+
+insert into permiso_usuario values
+(1,1, 1);
+
+

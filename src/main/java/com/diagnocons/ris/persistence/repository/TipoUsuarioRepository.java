@@ -1,4 +1,4 @@
-package com.diagnocons.ris.persistence;
+package com.diagnocons.ris.persistence.repository;
 
 import com.diagnocons.ris.domain.dto.UserType;
 import com.diagnocons.ris.domain.repository.UserTypeRepository;

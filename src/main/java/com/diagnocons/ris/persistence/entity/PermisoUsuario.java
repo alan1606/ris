@@ -9,39 +9,37 @@ import javax.persistence.*;
 
 public class PermisoUsuario {
 
-    @EmbeddedId
-    private PermisoUsuarioPK id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
 
-    public PermisoUsuarioPK getId() {
+    @Column(name = "id_usuario")
+    private Long idUsuario;
+
+    @Column(name = "id_permiso")
+    private Long idPermiso;
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(PermisoUsuarioPK id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    /*@ManyToOne
-    @JoinColumn(name = "id_usuario", insertable=false, updatable = false)
-    private Usuario usuario;*/
-
-   /* @ManyToOne
-    @JoinColumn(name = "id_permiso", insertable=false, updatable = false)
-    private Permiso permiso;*/
-
-
-   /* public Usuario getUsuario() {
-        return usuario;
+    public Long getIdUsuario() {
+        return idUsuario;
     }
 
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
-    }*/
-
-   /* public Permiso getPermisoUsuario() {
-        return permisoUsuario;
+    public void setIdUsuario(Long idUsuario) {
+        this.idUsuario = idUsuario;
     }
 
-    public void setPermisoUsuario(Permiso permisoUsuario) {
-        this.permisoUsuario = permisoUsuario;
-    }*/
+    public Long getIdPermiso() {
+        return idPermiso;
+    }
+
+    public void setIdPermiso(Long idPermiso) {
+        this.idPermiso = idPermiso;
+    }
 }

@@ -15,6 +15,9 @@ public class Recepcionista {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "id_usuario")
+    private Long idUsuario;
+
     @OneToOne
     @JoinColumn(name = "id_usuario", insertable = false, updatable = false)
     private Usuario usuario;

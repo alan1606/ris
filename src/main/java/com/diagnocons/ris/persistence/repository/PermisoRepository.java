@@ -1,4 +1,4 @@
-package com.diagnocons.ris.persistence;
+package com.diagnocons.ris.persistence.repository;
 
 import com.diagnocons.ris.domain.dto.Permission;
 import com.diagnocons.ris.domain.repository.PermissionRepository;
@@ -14,10 +14,10 @@ import java.util.Optional;
 @Repository
 public class PermisoRepository implements PermissionRepository {
     @Autowired
-    PermisoCrudRepository permisoCrudRepository;
+    private PermisoCrudRepository permisoCrudRepository;
 
     @Autowired
-    PermissionMapper mapper;
+    private PermissionMapper mapper;
 
     @Override
     public Optional<List<Permission>> getAll(){

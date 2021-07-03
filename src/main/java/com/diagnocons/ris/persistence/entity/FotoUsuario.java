@@ -13,6 +13,9 @@ public class FotoUsuario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "id_usuario")
+    private Long idUsuario;
+
     @ManyToOne
     @JoinColumn(name = "id_usuario", updatable = false, insertable = false)
     private Usuario usuario;

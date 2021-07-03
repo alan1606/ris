@@ -9,39 +9,37 @@ import java.util.List;
 @Entity
 @Table(name = "plantilla_permisos_tipo_usuario")
 public class PlantillaPermisosTipoUsuario {
-    @EmbeddedId
-    private PlantillaPermisosTipoUsuarioPK id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
 
-    public PlantillaPermisosTipoUsuarioPK getId() {
+    @Column(name = "id_tipo_usuario")
+    private Long idTipoUsuario;
+
+    @Column(name = "id_permiso")
+    private Long idPermiso;
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(PlantillaPermisosTipoUsuarioPK id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    /* @ManyToOne
-    @JoinColumn(name = "id_tipo_usuario", insertable=false, updatable = false)
-    private TipoUsuario tipoUsuario;
-
-    @ManyToOne
-    @JoinColumn(name = "id_permiso", insertable=false, updatable = false)
-    private Permiso permiso;*/
-
-
-    /*public TipoUsuario getTipoUsuario() {
-        return tipoUsuario;
+    public Long getIdTipoUsuario() {
+        return idTipoUsuario;
     }
 
-    public void setTipoUsuario(TipoUsuario tipoUsuario) {
-        this.tipoUsuario = tipoUsuario;
+    public void setIdTipoUsuario(Long idTipoUsuario) {
+        this.idTipoUsuario = idTipoUsuario;
     }
 
-    public Permiso getPermiso() {
-        return permiso;
+    public Long getIdPermiso() {
+        return idPermiso;
     }
 
-    public void setPermiso(Permiso permiso) {
-        this.permiso = permiso;
-    }*/
+    public void setIdPermiso(Long idPermiso) {
+        this.idPermiso = idPermiso;
+    }
 }
