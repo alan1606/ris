@@ -16,6 +16,7 @@ public class Corte {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    //Hay que ignorarlo
     @OneToOne
     @JoinColumn(name = "id_turno", insertable = false, updatable = false)
     private Turno turno;

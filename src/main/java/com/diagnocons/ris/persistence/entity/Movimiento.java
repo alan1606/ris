@@ -23,6 +23,27 @@ public class Movimiento {
     @Column(name = "descripcion", length = 60)
     private String descripcion;
 
+    @Column(name = "hora")
+    private LocalTime hora;
+
+    @Column(name = "entrada")
+    private boolean entrada;
+
+    public LocalTime getHora() {
+        return hora;
+    }
+
+    public void setHora(LocalTime hora) {
+        this.hora = hora;
+    }
+
+    public boolean isEntrada() {
+        return entrada;
+    }
+
+    public void setEntrada(boolean entrada) {
+        this.entrada = entrada;
+    }
 
     public Long getId() {
         return id;
