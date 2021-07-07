@@ -141,11 +141,13 @@ create table agenda(
 ) comment "Es una agenda, se declara solamente que pertenece a un día";
 
 create table agenda_en_departamento(
+id bigint unsigned not null,
 	id_agenda bigint unsigned not null,
     id_departamento bigint unsigned not null,
     hora_inicio time not null comment "La hora en que se puede comenzar a establecer citas",
     hora_fin time not null comment "La hora en que se permite agendar la última cita",
-    constraint pk_agenda_departamento primary key(id_agenda,id_departamento),
+    constraint pk_id primary key(id),
+    constraint uq_agenda_departamento unique(id_agenda,id_departamento),
     constraint fk_id_agenda_agenda_en_departamento foreign key (id_agenda) references agenda(id),
     constraint fk_id_departamento foreign key(id_departamento) references departamento(id)
 ) comment "Una agenda cambia respecto a cada departamento, puede cambiar su hora de inicio y de fin; algunos días pueden cambiar también su horario";
@@ -195,6 +197,7 @@ create table corte(
     constraint uq_corte unique (id_turno, dia, id_recepcionista_responsable),
     foreign key id_recepcionista_corte (id_recepcionista_responsable) references recepcionista (id)
 );
+
 
 create table movimiento(
 	id bigint unsigned not null,

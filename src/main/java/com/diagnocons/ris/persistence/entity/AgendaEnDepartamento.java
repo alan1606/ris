@@ -21,7 +21,7 @@ public class AgendaEnDepartamento {
     @JoinColumn(name = "id_departamento", insertable = false, updatable = false)
     private Departamento departamento;
 
-    @Column(name = "hora_incio")
+    @Column(name = "hora_inicio")
     private LocalTime horaInicio;
 
     @Column(name = "hora_fin")
