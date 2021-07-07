@@ -18,7 +18,7 @@ public class Departamento {
     private String nombre;
 
     @Column(name = "duracion_minutos")
-    private Integer duarcionMinutos;
+    private Integer duracionMinutos;
 
     @Column(name = "hora_inicio")
     private LocalTime horaInicio;
@@ -58,12 +58,12 @@ public class Departamento {
         this.nombre = nombre;
     }
 
-    public Integer getDuarcionMinutos() {
-        return duarcionMinutos;
+    public Integer getDuracionMinutos() {
+        return duracionMinutos;
     }
 
-    public void setDuarcionMinutos(Integer duarcionMinutos) {
-        this.duarcionMinutos = duarcionMinutos;
+    public void setDuracionMinutos(Integer duracionMinutos) {
+        this.duracionMinutos = duracionMinutos;
     }
 
     public LocalTime getHoraInicio() {
