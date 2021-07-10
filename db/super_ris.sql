@@ -178,10 +178,12 @@ create table recepcionista(
 ) comment "Se usa esta tabla para almacenar el dato de la persona que agendó x cita";
 
 create table recepcionista_departamento(
+	id bigint unsigned not null auto_increment,
 	id_recepcionista bigint unsigned not null,
     id_departamento bigint unsigned not null,
     activo boolean default true not null,
-    primary key(id_recepcionista,id_departamento),
+    primary key(id),
+    unique (id_recepcionista,id_departamento),
     foreign key(id_recepcionista) references recepcionista (id),
     foreign key(id_departamento) references departamento (id)
 );
