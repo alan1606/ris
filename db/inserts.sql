@@ -152,3 +152,12 @@ insert into recepcionista values
  insert into cita values
 (1, 1, 1,1, 1,"07:00",1),
 (2, 1, 2,2, 2,"08:00",3);
+
+insert into datos_facturacion (
+razon_social ,
+    rfc ,
+    cp ,
+    email ,
+    telefono)
+values
+("El alan inc", "AURA000616PI0", "33800", "mauri.ar3@gmail.com", "6272790112");

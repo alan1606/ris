@@ -84,7 +84,7 @@ CREATE TABLE `estado` (
 ) COMMENT='Tabla de Estados de la República Mexicana';
 
 create table datos_facturacion(
-	id bigint unsigned not null,
+	id bigint unsigned not null auto_increment,
     razon_social varchar(100) not null,
     rfc varchar(13) not null,
     cp varchar(8) not null,
