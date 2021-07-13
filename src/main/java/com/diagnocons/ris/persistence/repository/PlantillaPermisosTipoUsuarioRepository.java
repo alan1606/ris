@@ -15,10 +15,10 @@ import java.util.Optional;
 public class PlantillaPermisosTipoUsuarioRepository implements UserTypePermissionTemplateRepository {
 
     @Autowired
-    PlantillaPermisosTipoUsuarioCrudRepository plantillaPermisosTipoUsuarioCrudRepository;
+    private PlantillaPermisosTipoUsuarioCrudRepository plantillaPermisosTipoUsuarioCrudRepository;
 
     @Autowired
-    UserTypePermissionTemplateMapper mapper;
+    private UserTypePermissionTemplateMapper mapper;
 
     @Override
     public Optional<List<UserTypePermissionTemplate>> getByIdPermission(Long idPermission) {
